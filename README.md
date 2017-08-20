@@ -6,12 +6,12 @@ Usage: Place multiple files obtained inside the loans folder in src/resources/lo
 Assumptions: Following assumptions are made
 1. Since file is provided every two months, there may be chances that historic data for month might contain for both current and next year, as a result, the tuple for month is composed of Month and Year together to provide correct statistics
 2. The template of the file would always follow pattern specified in the sample csv of Msidn, Network, Month, Product and Amount
-3. For the nature of the project and to keep simplicity, complex batch operations (like chunking, multi-tasking) are not implemented. However, application architecture is in place such that, if needed it can be configured for scale to tackle concurrency.
+3. For the nature of the project and to keep simplicity, complex batch operations (like chunking, multi-tasking) are not implemented. However, application architecture is in place such that, if needed it can be configured to tackle concurrency.
 
 Technology:
 1. The program is written in Java using version 8
 2. The third party libraries compose of using the Spring Batch framework (for maintainability, extensibility, configurability)
-3. Lombok plugin is used within the Elipse IDE and the project, due to it's nature of providing clean code in the application, with unecessary boiler plate
+3. Lombok plugin is used within the Elipse IDE and the project, due to it's nature of providing clean code in the application, with unecessary boiler plate. (See https://projectlombok.org/setup/eclipse or project page for IDE installation)
 4. The program also uses apache IO for writing to CSV
 
 Performance Considerations:
@@ -24,5 +24,8 @@ Scalability:
 2. Through DevOps, scaling can be achieved by net result of using container orchestration, load balancer.
 3. The choice of Spring framework for the application makes it easy to integrated with other tools in the Spring framework that provide integration options for plethora of systems.
 4. On its own, it can also serve as a micro-service which can be used by other services within the companie's eco-system.
+
+Quality Control:
+1. Unit testing is performed with tests in test folder
 
 
